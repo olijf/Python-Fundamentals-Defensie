@@ -9,6 +9,9 @@ _*/
 # Visual Studio
 *.code-workspace
 
+# PyCharm
+.idea/
+
 # Microsoft Powerpoint
 **/*.pptx
 
