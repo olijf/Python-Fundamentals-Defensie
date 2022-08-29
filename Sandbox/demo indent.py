@@ -1,32 +1,21 @@
 
 
-gender = 'X'
-
+gender = 'f'
 
 if gender == 'm':
-
     print('Good day dear sir.')
+    print('Jolly Good')
 
-if gender == 'f':
-
+elif gender == 'f':
     print('Good day madame.')
 
-else:
+elif gender == 'x':
+    print('Good day xender.')
 
-    print('Good day dear person.')
+else:
+    if gender == 't':
+        print('Good day dear person.')
+    else:
+        print('Whatever')
 
 print('See you tommorow.')
-
-
-
-s = 'abacadabra eveyyyy'
-for vowel in ['a','e','i','o','u','y']:
-    print(vowel, s.count(vowel))
-
-
-
-for number in range(1, 20):
-    print(number)
-
-
-
