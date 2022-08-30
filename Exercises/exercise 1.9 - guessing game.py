@@ -1,3 +1,4 @@
+
 import random
 
 lower = 1
@@ -21,5 +22,5 @@ while True:
         print('higher ...')
 
     elif guess == magic_number:
-        print(f'YEAAAH!!!! You guessed it in {number_of_guesses} guesses')
+        print(f'YEAAAH!!!! The number was {magic_number}. You guessed it in {number_of_guesses} guesses.')
         break

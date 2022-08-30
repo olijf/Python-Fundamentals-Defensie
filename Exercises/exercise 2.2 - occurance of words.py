@@ -1,24 +1,31 @@
 
 s = r"""\
-Eindhoven (Geluidsfragment uitspraak (info / uitleg)) is een stad en gemeente in de Kempen, in het zuidoosten van de Nederlandse provincie Noord-Brabant. Het is naar inwonertal al sinds 1961 de vijfde gemeente van Nederland. Ze telt 238.478 inwoners (31 januari 2022) op een grondgebied van 88,84 km². Ze omvat naast de gelijknamige stad Eindhoven tevens het dorp Acht en de uitbreidingslocatie Meerhoven.
+Op 10 mei 1940 bleef het versperde vliegveld verschoond van een Duits bombardement. Maar de Luftwaffe nam het vliegveld spoedig na de Nederlandse overgave in gebruik. De Duitsers herstelden het vliegveld en breidden het uit. Het vliegveld huisvestte grote, onbeschadigde Nederlandse hangars en had een gunstige bodemgesteldheid. Hierdoor was Soesterberg uitermate geschikt voor het stationeren van zwaardere toestellen.
 
-De gemeente Eindhoven maakte in de eerste helft en het midden van de twintigste eeuw een explosieve groei door. In 1920 annexeerde de stad — aan het begin van de eeuw een klein Kempisch stadje — vijf omliggende gemeenten, waardoor de gemeente ineens enorm vergroot werd, zowel qua oppervlakte (van 75 tot 6300 ha) als qua inwoneraantal (van 6.500 naar 46.000).[1] Op 1 januari 1940 had Eindhoven al 113.126 inwoners.[1] Het schaarde zich daarmee al hoog op de ranglijst van grootste gemeentes in Nederland. In de volgende 75 jaar werd dit inwonertal verdubbeld. Allesbepalend voor deze ontwikkeling was de groei van het Philips-concern, van gloeilampenfabriek tot multinational en wereldspeler op het gebied van de elektronica.
+Toch beten kleine jachtvliegtuigen van het type Bf 109 het spits af. Rond juni 1940 streken namelijk een aantal Bf 109’s neer op de voormalige ‘Bakermat’. Zij waren van de Gruppenstab van de I./JG 54 en de III./JG 54. Maar begin juli 1940 vertrokken zij alweer.
 
-De gemeente verwelkomde haar 225.000e inwoner[2] op 24 november 2015. De stad groeit nog steeds: de prognose is dat het aantal inwoners van de gemeente in 2040 zal zijn gestegen naar 248.000.[3] De gemeente is de hoofdplaats van de Metropoolregio Eindhoven (MRE) en maakt deel uit van het stedelijk netwerk BrabantStad. De agglomeratie Eindhoven (niet te verwarren met de metropoolregio), bestaande uit onder andere de gemeenten Eindhoven, Veldhoven, Best, Nuenen en Geldrop-Mierlo, telt bijna 420.000 inwoners op een oppervlakte van ongeveer 540 km². In de MRE wonen ongeveer 750.000 mensen."""
+Daarna waren er vooral bommenwerpers op Soesterberg. Het vliegveld werd eind juli de thuisbasis van het KG 4 en het I./KG 4. Beide eenheden hadden He 111’s. Zij bleven tot eind juni 1941 op het vliegveld. Van hieruit namen ze deel aan de slag om Engeland en de ‘Blitz’. Begin 1941 kregen zij nog versterking van de heropgerichte III./KG 4. De bommenwerpers van het KG 4 bombardeerden onder meer Britse steden. Ook legden zij mijnen in de Britse kustwateren en vielen de geallieerde koopvaardijvaart aan.
 
+Na het vertrek van het KG 4 werd het allerminst stil op Soesterberg. Vanaf augustus was het vliegveld de thuisbasis van de Geschwaderstab van het KG 40 en de III./KG 40.
+
+In december 1941 arriveerden bovendien ook nog de bommenwerpers van het Kampfgeschwader 2. Alle Gruppen van dit Geschwader waren tot september 1944 voor kortere of langere tijd op Soesterberg gestationeerd.
+
+Dit geldt ook voor de Geswaderstab. De oorlogsgeschiedenis van deze eenheid is onlosmakelijk verbonden met die van het vliegveld. Tussen eind 1941 en 1944 voerden de Do 217’s van het KG 2 talloze bombardementen uit vanaf Soesterberg. Dit deden zij op scheepsdoelen en op steden en havens in Groot-Brittannië. Zij incasseerden hierbij zware verliezen."""
 
 
 # clean up
-# s = s.lower().replace('.', '').replace(',', '').replace('(', '').replace(')', '')
+s = s.lower().replace('.', '').replace(',', '').replace('(', '').replace(')', '')
 
 # or
-# import string
-s = s.lower().translate(str.maketrans('', '', '.,(){}[]/\|#&'))
+s = s.upper().translate(str.maketrans('', '', r'\'"‘’.,(){}[]/\|#&'))
+
+# or
+import string
+s = s.upper().translate(str.maketrans('', '', string.punctuation + '‘’'))
 
 # or
 # import re
-# s = re.sub(r'[^a-zA-Z0-9 ]', '', s)
-
+# s = re.sub(r'[^a-zA-Z0-9 ]', '', s).lower()
 
 
 words = s.split()
@@ -38,8 +45,9 @@ for word, n in sorted(d.items()):
 
 
 
+
 # or
-d = {word: words.count(word) for word in set(words)}
+# d = {word: words.count(word) for word in set(words)}
 
 # from operator import itemgetter
 # for word, n in sorted(d.items(), key = itemgetter(1, 0), reverse = True):

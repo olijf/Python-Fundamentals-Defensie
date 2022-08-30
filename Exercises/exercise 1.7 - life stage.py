@@ -55,11 +55,11 @@ for d in lijst:
 
 
 
-d = {'baby': [0, 2]},
-     'toddler': [2, 4]},
-     'kid': [4, 12]},
-     'teenager': [13, 20]},
-     'adult': [21, 65]},
+d = {'baby': [0, 2],
+     'toddler': [2, 4],
+     'kid': [4, 12],
+     'teenager': [13, 20],
+     'adult': [21, 65],
      'elder': [65, 110]}
 
 for k, v in d.items():
