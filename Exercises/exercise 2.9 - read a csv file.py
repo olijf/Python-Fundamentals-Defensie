@@ -1,4 +1,4 @@
-filename = 'ca-500.csv'
+filename = '../Sandbox/ca-500.csv'
 
 with open(filename, 'r') as f:
     headers = f.readline().strip().split(';')

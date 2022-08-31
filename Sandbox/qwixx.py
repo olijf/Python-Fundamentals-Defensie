@@ -1,3 +1,4 @@
+import random
 
 empty_card = {
     'player': '',
@@ -13,6 +14,7 @@ empty_card = {
     'total_forfeit': 0,
     'score': 0
 }
+
 
 def mark(card, cell):
     """
@@ -89,6 +91,24 @@ def score(card):
                     card['total_green'] + \
                     card['total_blue'] - \
                     card['total_forfeit']
+
+
+def throw_quixx_dice():
+    d = {
+        'red': random.randint(1, 6),
+        'yellow': random.randint(1, 6),
+        'green': random.randint(1, 6),
+        'blue': random.randint(1, 6),
+        'white1': random.randint(1, 6),
+        'white2': random.randint(1, 6)
+    }
+    return d
+
+
+def combinaties(throw):
+    combis = [
+    ]
+
 
 
 
