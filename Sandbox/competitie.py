@@ -14,9 +14,12 @@ class Club:
         with open(filename, 'wb') as f:
             pickle.dump(self.__dict__, f)
 
-    def restore_from_pickle(self, filename = 'club.pickle'):
+    @staticmethod
+    def restore_from_pickle(filename = 'club.pickle'):
         with open(filename, 'rb') as f:
-            self.__dict__.update(pickle.load(f))
+            club = Club()
+            club.__dict__.update(pickle.load(f))
+            return club
 
 
 class Team:
@@ -75,5 +78,7 @@ speler3 = Speler('Luke', 4, 'verdediger')
 team.speler_toevoegen(speler1, speler2, speler3)
 
 club_AJAX.team_toevoegen(team)
+
+# club = Club.restore_from_pickle()
 
 print('OK')
