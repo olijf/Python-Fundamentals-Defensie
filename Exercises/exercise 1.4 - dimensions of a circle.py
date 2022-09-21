@@ -8,6 +8,3 @@ circumference = 2 * math.pi * radius
 print('Radius', radius)
 print('Area', area)
 print('Circumference', circumference)
-
-print(f'Area {area:.3f}')
-print(f'Area {area:.1f}')
