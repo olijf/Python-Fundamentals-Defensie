@@ -1,6 +1,6 @@
 
 class BankAccount(object):
-    """This is my BAnkAccount class"""
+    """This is my BankAccount class"""
 
     currency = '$'
 

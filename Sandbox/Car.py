@@ -12,10 +12,17 @@ class Car:
     def drive(self, km):
         self._mileage += km
 
+    def __str__(self):
+        return f'Car("{self._make}", "{self._type}", "{self._color}", {self._mileage})'
+
 # -------------------------------------------------------
 
-my_car = Car('Renault', 'Megane', 'metalic brown')
+if __name__ == '__main__':
 
-my_car.drive(200)
+    my_car = Car('Renault', 'Megane', 'metalic brown')
 
-print(my_car)
+    my_car.drive(200)
+
+    my_car.info()
+
+    print(my_car)

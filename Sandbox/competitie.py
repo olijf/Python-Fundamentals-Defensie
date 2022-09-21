@@ -33,11 +33,23 @@ class Team:
         for speler in spelers:
             self.spelers.append(speler)
 
+    def __str__(self):
+        s = f'Team {self.naam}'
+        for speler in self.spelers:
+            s += '\n' + str(speler)
+        return s
+
 class Speler:
     def __init__(self, naam, rugnummer, positie):
         self.naam = naam
         self.rugnummer = rugnummer
         self.positie = positie
+
+    def __str__(self):
+        return f'Speler {self.naam} met rugnummer {self.rugnummer} staat op {self.positie}'
+
+    def __eq__(self, other):
+        return self.naam == other.naam
 
 class Wedstrijd:
 
@@ -71,7 +83,7 @@ club_ADO.team_toevoegen(team)
 
 team = Team('Eerste elftal')
 
-speler1 = Speler('Piet', 9, 'spits')
+speler1 = Speler('Luke', 9, 'spits')
 speler2 = Speler('van Haneigem', 7, 'keeper')
 speler3 = Speler('Luke', 4, 'verdediger')
 
@@ -81,4 +93,5 @@ club_AJAX.team_toevoegen(team)
 
 # club = Club.restore_from_pickle()
 
-print('OK')
+
+print(team)

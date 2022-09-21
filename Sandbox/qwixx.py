@@ -94,6 +94,10 @@ def score(card):
 
 
 def throw_quixx_dice():
+    """"
+    >>> len(throw_quixx_dice())
+    6
+    """
     d = {
         'red': random.randint(1, 6),
         'yellow': random.randint(1, 6),
