@@ -1,12 +1,6 @@
-import numpy as np
-from banner_functions import banner, print_banner
 
-# ----------------------------------------------------------
+from banner_functions import banner
 
-if __name__ == '__main__':
+name = input('Wat is jouw naam? : ')
 
-    name = input('Wat is jouw naam? : ')
-
-    banner(name)
-
-    print_banner(name)
+banner(name, width=40, c = '@')

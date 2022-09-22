@@ -17,11 +17,11 @@ Dit geldt ook voor de Geswaderstab. De oorlogsgeschiedenis van deze eenheid is o
 s = s.lower().replace('.', '').replace(',', '').replace('(', '').replace(')', '')
 
 # or
-s = s.upper().translate(str.maketrans('', '', r'\'"‘’.,(){}[]/\|#&'))
+s = s.lower().translate(str.maketrans('', '', r'\'"‘’.,(){}[]/\|#&'))
 
 # or
 import string
-s = s.upper().translate(str.maketrans('', '', string.punctuation + '‘’'))
+s = s.lower().translate(str.maketrans('', '', string.punctuation + '‘’'))
 
 # or
 # import re
@@ -37,7 +37,7 @@ for word in unique_words:
     n = words.count(word)
     d[word] = n
 
-for word, n in sorted(d.items()):
+for word, n in sorted(d.items(), key = lambda item: item[1], reverse = True):
    print(f'{word:20}: {n:3}')
 
 

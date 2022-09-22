@@ -19,7 +19,7 @@ print('Total', dice1 + dice2 + dice3 + dice4 + dice5)
 
 
 dice = []
-for _ in range(10):
+for _ in range(5):
     dice.append( random.randint(1, 6) )
 
 print('Thrown', dice)

@@ -3,7 +3,7 @@ names = []
 while True:
     name = input('Enter a name: ')
 
-    if name == '':
+    if not name:
         break
 
     names.append(name)
