@@ -1,3 +1,5 @@
-import random
+voornaam = 'Peter'
+achternaam = 'Anema'
+naam = f'{voornaam} {achternaam}'
 
-print(random.randint(1, 100))
+print(f'Hallo {naam}')
