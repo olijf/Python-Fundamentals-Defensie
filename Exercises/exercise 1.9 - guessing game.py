@@ -12,7 +12,6 @@ number_of_guesses = 0
 while True:
 
     guess = int(input('What is your next guess? '))
-
     number_of_guesses += 1
 
     if guess > magic_number:

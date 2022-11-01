@@ -24,6 +24,28 @@ elif age >= 65:
 
 
 
+# match age:
+#     case age if age < 2:
+#         print('A baby')
+#
+#     case age if 2 <= age < 4:
+#         print('A toddler')
+#
+#     case age if 4 <= age < 13:
+#         print('A kid')
+#
+#     case age if 13 <= age and age < 20:
+#         print('A teenager')
+#
+#     case age if 20 <= age < 65:
+#         print('An adult')
+#
+#     case age if age >= 65:
+#         print('An elder')
+
+
+
+
 
 
 

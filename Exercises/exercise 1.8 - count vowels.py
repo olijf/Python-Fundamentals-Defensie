@@ -15,6 +15,7 @@ number_of_vowels = number_of_a + \
                    number_of_y
 
 print("Total number of characters: %d" % len(s))
+print(f"Total number of characters: {len(s)}")
 
 print("Found the vowel 'a' %d times" % number_of_a)
 print("Found the vowel 'e' %d times" % number_of_e)
