@@ -1,3 +1,4 @@
+
 def banner(text):
     n = len(text)
     print('***' + '*' * n + '***')
@@ -25,8 +26,9 @@ def create_banner(text, c='*'):
 def print_banner(text):
     print(create_banner(text, '+'))
 
-# ---------------------------------
+
+# ----------------------------------------------------------------
 
 if __name__ == '__main__':
 
-    banner('Albert Einstein')
+    banner('abacadabra')

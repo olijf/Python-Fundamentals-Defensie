@@ -1,12 +1,12 @@
 names = []
-
 while True:
     name = input('Enter a name: ')
 
-    if not name:
+    if name:
+        names.append(name)
+    else:
         break
 
-    names.append(name)
 
 for name in sorted(names):
     print(name)
